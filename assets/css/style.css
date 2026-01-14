@@ -576,6 +576,18 @@ section {
   font-weight: 600;
   font-size: 26px;
 }
+/* Protonical Researchers Hub - About Expertise List Fix */
+.about-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 
 .about .content ul {
   list-style: none;
@@ -626,6 +638,55 @@ section {
   color: #fff;
   text-decoration: none;
 }
+/* ============================================================
+   Protonical Researchers Hub — About Section Final Fix
+   ============================================================ */
+
+/* Force bullets to appear */
+#about ul {
+  list-style: disc !important;
+  padding-left: 20px !important;
+}
+
+/* Prevent template from removing bullets */
+#about .content ul {
+  list-style: disc !important;
+  padding-left: 20px !important;
+}
+
+/* Reset broken positioning from template */
+#about .content ul li {
+  padding-left: 0 !important;
+  position: relative !important;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Remove fake icon spacing if any */
+#about .content ul i {
+  display: none !important;
+}
+
+/* Improve typography */
+#about p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Two-column list spacing */
+#about .col-lg-6 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  #about .col-lg-6 {
+    margin-bottom: 20px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Why Us
