@@ -129,12 +129,9 @@
       --prh-muted: #607184;
       --prh-light: #f3f8fc;
       --prh-border: #e1eaf2;
-      --prh-shadow: 0 10px 30px rgba(16, 46, 73, 0.08);
+      --prh-shadow: 0 10px 30px rgba(16, 46, 73, .08);
     }
 
-    /* =========================
-       GLOBAL RESPONSIVE LAYOUT
-       ========================= */
     *,
     *::before,
     *::after {
@@ -183,14 +180,13 @@
       overflow: hidden;
     }
 
-    /* Override Bootstrap fixed container widths */
     .container {
       width: 100% !important;
-      max-width: 1600px !important;
-      margin-right: auto !important;
+      max-width: 1440px !important;
       margin-left: auto !important;
-      padding-right: clamp(16px, 3vw, 40px) !important;
-      padding-left: clamp(16px, 3vw, 40px) !important;
+      margin-right: auto !important;
+      padding-left: clamp(16px, 2.5vw, 36px) !important;
+      padding-right: clamp(16px, 2.5vw, 36px) !important;
     }
 
     .row {
@@ -212,9 +208,10 @@
 
     .section-title h2 {
       position: relative;
-      margin-bottom: 18px;
+      margin: 0 0 18px;
       padding-bottom: 20px;
       color: var(--prh-navy);
+      font-family: "Jost", sans-serif;
       font-size: clamp(25px, 2.7vw, 38px);
       font-weight: 800;
       line-height: 1.2;
@@ -226,7 +223,6 @@
       position: absolute;
       bottom: 1px;
       left: calc(50% - 60px);
-      display: block;
       width: 120px;
       height: 1px;
       background: #ddd;
@@ -237,7 +233,6 @@
       position: absolute;
       bottom: 0;
       left: calc(50% - 20px);
-      display: block;
       width: 40px;
       height: 3px;
       background: var(--prh-cyan);
@@ -253,9 +248,7 @@
       overflow-wrap: anywhere;
     }
 
-    /* =========================
-       HEADER AND NAVIGATION
-       ========================= */
+    /* HEADER */
     #header,
     #header.fixed-top,
     #header.header-scrolled,
@@ -397,7 +390,6 @@
       cursor: pointer;
     }
 
-    /* Mobile menu, compatible with the template's main.js toggle */
     .navbar-mobile {
       position: fixed;
       inset: 0;
@@ -470,9 +462,7 @@
       display: block;
     }
 
-    /* =========================
-       HERO
-       ========================= */
+    /* HERO */
     #hero {
       position: relative;
       display: flex !important;
@@ -587,14 +577,16 @@
       padding-left: clamp(0px, 1.6vw, 24px) !important;
     }
 
+    /* Enlarged desktop illustration */
     #hero .hero-img img {
       display: block;
-      width: 100% !important;
-      max-width: 590px;
-      height: auto;
-      max-height: min(52vw, 530px) !important;
-      margin: 0 auto;
+      width: 110% !important;
+      max-width: 720px !important;
+      height: auto !important;
+      max-height: min(60vw, 620px) !important;
+      margin: 0 0 0 -4%;
       object-fit: contain;
+      object-position: center;
       filter: drop-shadow(0 15px 32px rgba(0, 0, 0, .2));
       animation: none;
     }
@@ -650,9 +642,7 @@
       color: var(--prh-navy);
     }
 
-    /* =========================
-       ABOUT
-       ========================= */
+    /* ABOUT */
     #about {
       padding: clamp(48px, 5vw, 78px) 0;
       background: #fff;
@@ -686,9 +676,7 @@
       color: var(--prh-blue);
     }
 
-    /* =========================
-       WHY CHOOSE US
-       ========================= */
+    /* WHY CHOOSE US */
     #why-us {
       padding: clamp(48px, 5vw, 78px) 0;
       background: var(--prh-light);
@@ -731,9 +719,7 @@
       line-height: 1.85;
     }
 
-    /* =========================
-       SERVICES
-       ========================= */
+    /* SERVICES */
     #services {
       padding: clamp(48px, 5vw, 78px) 0;
       background: #fff;
@@ -825,9 +811,7 @@
       font-size: 17px;
     }
 
-    /* =========================
-       PROGRAMS
-       ========================= */
+    /* PROGRAMS */
     #programs {
       padding: clamp(48px, 5vw, 78px) 0;
       background: var(--prh-light);
@@ -883,9 +867,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       PORTFOLIO
-       ========================= */
+    /* PORTFOLIO */
     #portfolio {
       padding: clamp(48px, 5vw, 78px) 0;
       background: #fff;
@@ -956,9 +938,7 @@
       line-height: 1.7;
     }
 
-    /* =========================
-       LEADERSHIP & RESEARCH TEAM
-       ========================= */
+    /* TEAM */
     #team {
       padding: clamp(48px, 5vw, 78px) 0;
       background: var(--prh-light);
@@ -1012,7 +992,7 @@
       max-width: 100%;
       max-height: 100%;
       object-fit: contain !important;
-      object-position: center center;
+      object-position: center;
       border-radius: 14px;
       background: #fff;
       transition: none !important;
@@ -1056,9 +1036,7 @@
       overflow-wrap: anywhere;
     }
 
-    /* =========================
-       INTERNSHIP APPLICATION
-       ========================= */
+    /* INTERNSHIP FORM */
     #internship-apply {
       padding: clamp(48px, 5vw, 78px) 0;
       background: #f3f5fa;
@@ -1242,9 +1220,7 @@
       font-size: 12px;
     }
 
-    /* =========================
-       FAQ
-       ========================= */
+    /* FAQ */
     #home-faq {
       padding: clamp(48px, 5vw, 78px) 0;
       background: #fff;
@@ -1302,9 +1278,7 @@
       line-height: 1.85;
     }
 
-    /* =========================
-       CONTACT
-       ========================= */
+    /* CONTACT */
     #contact {
       padding: clamp(48px, 5vw, 78px) 0;
       background: var(--prh-light);
@@ -1429,9 +1403,7 @@
       font-size: 12px;
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
+    /* FOOTER */
     #footer {
       padding: 25px 0;
       background: #061c2e;
@@ -1457,11 +1429,16 @@
       border-radius: 8px;
     }
 
-    /* =========================
-       RESPONSIVE BREAKPOINTS
-       ========================= */
+    /* AOS FAILSAFE:
+       Content remains visible if local scripts fail to load.
+       Once AOS initializes, the aos-ready class allows its animations. */
+    html:not(.aos-ready) [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
 
-    /* Small desktop and laptop widths */
+    /* RESPONSIVE NAVIGATION AND HERO */
     @media (max-width: 1399px) {
       .container,
       #hero .container {
@@ -1475,7 +1452,6 @@
       }
     }
 
-    /* Replace desktop navigation with mobile menu before links collide */
     @media (max-width: 1100px) {
       #header,
       #header.fixed-top,
@@ -1519,8 +1495,9 @@
       }
 
       #hero .hero-img img {
-        width: min(82%, 420px) !important;
-        max-height: 380px !important;
+        width: min(90%, 560px) !important;
+        max-width: 560px !important;
+        max-height: min(75vw, 420px) !important;
         margin: 0 auto;
       }
 
@@ -1545,7 +1522,6 @@
       }
     }
 
-    /* Tablets */
     @media (max-width: 991px) {
       #team .team-card .pic {
         height: 300px;
@@ -1557,7 +1533,6 @@
       }
     }
 
-    /* Phones and small tablets */
     @media (max-width: 767px) {
       .container {
         padding-right: 16px !important;
@@ -1608,8 +1583,9 @@
       }
 
       #hero .hero-img img {
-        width: min(78%, 340px) !important;
-        max-height: 250px !important;
+        width: min(90%, 420px) !important;
+        max-width: 420px !important;
+        max-height: min(80vw, 340px) !important;
         margin: 0 auto;
       }
 
@@ -1665,7 +1641,6 @@
       }
     }
 
-    /* Narrow phones */
     @media (max-width: 420px) {
       #header .logo {
         max-width: 235px;
@@ -1692,8 +1667,10 @@
       }
 
       #hero .hero-img img {
-        width: min(76%, 300px) !important;
-        max-height: 220px !important;
+        width: min(90%, 360px) !important;
+        max-width: 360px !important;
+        max-height: min(76vw, 300px) !important;
+        margin: 0 auto;
       }
 
       #hero .hero-eyebrow {
@@ -1730,7 +1707,7 @@
 
 <body>
 
-  <!-- ==================== HEADER ==================== -->
+  <!-- HEADER -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
@@ -1758,7 +1735,7 @@
     </div>
   </header>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- HERO -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <div class="row">
@@ -1799,6 +1776,7 @@
             class="img-fluid"
             alt="Embedded systems, IoT, AI and product development at Protonical Researchers Hub"
             fetchpriority="high"
+            loading="eager"
             decoding="async">
         </div>
 
@@ -1808,16 +1786,13 @@
 
   <main id="main">
 
-    <!-- ==================== ABOUT ==================== -->
+    <!-- ABOUT -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>About Protonical Researchers Hub</h2>
-          <p>
-            Engineering research, practical development and product prototyping
-            from Bengaluru, India.
-          </p>
+          <p>Engineering research, practical development and product prototyping from Bengaluru, India.</p>
         </div>
 
         <div class="row">
@@ -1888,16 +1863,13 @@
       </div>
     </section>
 
-    <!-- ==================== WHY US ==================== -->
+    <!-- WHY US -->
     <section id="why-us">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Why Work With Us?</h2>
-          <p>
-            A practical approach to engineering, research and product development,
-            with project scope and deliverables discussed upfront.
-          </p>
+          <p>A practical approach to engineering, research and product development, with project scope and deliverables discussed upfront.</p>
         </div>
 
         <div class="row gy-4">
@@ -1905,11 +1877,7 @@
             <article class="why-card">
               <i class="bx bx-chip" aria-hidden="true"></i>
               <h3>Hardware and Software Together</h3>
-              <p>
-                Integrate microcontrollers, sensors, firmware, wireless
-                communication, software and connected systems within one
-                coordinated development process.
-              </p>
+              <p>Integrate microcontrollers, sensors, firmware, wireless communication, software and connected systems within one coordinated development process.</p>
             </article>
           </div>
 
@@ -1917,10 +1885,7 @@
             <article class="why-card">
               <i class="bx bx-cube-alt" aria-hidden="true"></i>
               <h3>Prototype-Focused Engineering</h3>
-              <p>
-                Move from early concepts to engineering designs, functional
-                prototypes, testing, troubleshooting and technical documentation.
-              </p>
+              <p>Move from early concepts to engineering designs, functional prototypes, testing, troubleshooting and technical documentation.</p>
             </article>
           </div>
 
@@ -1928,11 +1893,7 @@
             <article class="why-card">
               <i class="bx bx-book-open" aria-hidden="true"></i>
               <h3>Research and Training</h3>
-              <p>
-                Discuss student projects, internships, technical workshops,
-                institutional collaboration and R&amp;D requirements based on
-                the needs of each engagement.
-              </p>
+              <p>Discuss student projects, internships, technical workshops, institutional collaboration and R&amp;D requirements based on the needs of each engagement.</p>
             </article>
           </div>
         </div>
@@ -1940,16 +1901,13 @@
       </div>
     </section>
 
-    <!-- ==================== INTERNSHIP APPLICATION ==================== -->
+    <!-- INTERNSHIP APPLICATION -->
     <section id="internship-apply">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Apply for an Internship</h2>
-          <p>
-            Build practical skills through hands-on engineering, research and
-            product development experience.
-          </p>
+          <p>Build practical skills through hands-on engineering, research and product development experience.</p>
         </div>
 
         <div class="internship-form-layout">
@@ -1976,8 +1934,7 @@
 
             <p class="internship-note">
               <i class="bi bi-shield-check"></i>
-              Your information is collected to review and respond to your
-              internship application.
+              Your information is collected to review and respond to your internship application.
             </p>
           </div>
 
@@ -2092,9 +2049,7 @@
                   <input type="url" name="resumeLink" id="applicantResume"
                     class="form-control"
                     placeholder="Paste a shareable Google Drive, LinkedIn or portfolio link">
-                  <small>
-                    Ensure your link permissions allow our team to view it.
-                  </small>
+                  <small>Ensure your link permissions allow our team to view it.</small>
                 </div>
 
                 <div class="col-12 form-group">
@@ -2120,9 +2075,7 @@
                   <p id="internshipFormStatus" class="internship-form-status"
                     role="status" aria-live="polite"></p>
 
-                  <p class="internship-required-note">
-                    Fields marked * are required.
-                  </p>
+                  <p class="internship-required-note">Fields marked * are required.</p>
                 </div>
 
               </div>
@@ -2133,16 +2086,13 @@
       </div>
     </section>
 
-    <!-- ==================== SERVICES ==================== -->
+    <!-- SERVICES -->
     <section id="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Engineering, Training &amp; R&amp;D Services</h2>
-          <p>
-            Explore our engineering, technical training, prototyping and research
-            services for students, institutions, startups, MSMEs and industry.
-          </p>
+          <p>Explore our engineering, technical training, prototyping and research services for students, institutions, startups, MSMEs and industry.</p>
         </div>
 
         <div class="row gy-4">
@@ -2259,16 +2209,13 @@
       </div>
     </section>
 
-    <!-- ==================== PROGRAMS ==================== -->
+    <!-- PROGRAMS -->
     <section id="programs">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Find the Right Support for Your Goal</h2>
-          <p>
-            Choose the pathway that best describes your project, training or
-            institutional requirement.
-          </p>
+          <p>Choose the pathway that best describes your project, training or institutional requirement.</p>
         </div>
 
         <div class="row gy-4">
@@ -2331,16 +2278,13 @@
       </div>
     </section>
 
-    <!-- ==================== PORTFOLIO ==================== -->
+    <!-- PORTFOLIO -->
     <section id="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Our Projects &amp; R&amp;D Portfolio</h2>
-          <p>
-            Explore examples of engineering, IoT, AI, electronics and embedded
-            systems work. Update the captions to accurately reflect each project.
-          </p>
+          <p>Explore examples of engineering, IoT, AI, electronics and embedded systems work. Update captions to accurately reflect each project.</p>
         </div>
 
         <div class="row portfolio-container">
@@ -2348,8 +2292,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-1.jpg"
-                  alt="IoT smart monitoring system" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-1.jpg" alt="IoT smart monitoring system" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>IoT Smart Monitoring System</h3>
@@ -2361,8 +2304,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-2.jpg"
-                  alt="Embedded product prototype" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-2.jpg" alt="Embedded product prototype" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Embedded Product Prototype</h3>
@@ -2374,8 +2316,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-3.jpg"
-                  alt="AI-based automation project" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-3.jpg" alt="AI-based automation project" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>AI-Based Automation System</h3>
@@ -2387,8 +2328,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-4.jpg"
-                  alt="Medical device prototype" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-4.jpg" alt="Medical device prototype" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Medical Device Prototype</h3>
@@ -2400,8 +2340,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-5.jpg"
-                  alt="IoT energy monitoring system" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-5.jpg" alt="IoT energy monitoring system" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Energy Monitoring IoT</h3>
@@ -2413,8 +2352,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-6.jpg"
-                  alt="Embedded control system" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-6.jpg" alt="Embedded control system" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Embedded Control System</h3>
@@ -2426,8 +2364,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-7.jpg"
-                  alt="Drone and robotics development" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-7.jpg" alt="Drone and robotics development" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Drone &amp; Robotics R&amp;D</h3>
@@ -2439,8 +2376,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-8.jpg"
-                  alt="Industrial automation system" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-8.jpg" alt="Industrial automation system" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Industrial Automation</h3>
@@ -2452,8 +2388,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item">
             <article class="portfolio-card">
               <div class="portfolio-img">
-                <img src="assets/img/portfolio/portfolio-9.gif"
-                  alt="Smart connected device prototype" loading="lazy" decoding="async">
+                <img src="assets/img/portfolio/portfolio-9.gif" alt="Smart connected device prototype" loading="lazy" decoding="async">
               </div>
               <div class="portfolio-info">
                 <h3>Smart Device Prototype</h3>
@@ -2466,16 +2401,13 @@
       </div>
     </section>
 
-    <!-- ==================== LEADERSHIP ==================== -->
+    <!-- TEAM -->
     <section id="team">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Leadership &amp; Research Team</h2>
-          <p>
-            Meet the people supporting engineering, research, product development,
-            technical operations and innovation at Protonical Researchers Hub.
-          </p>
+          <p>Meet the people supporting engineering, research, product development, technical operations and innovation at Protonical Researchers Hub.</p>
         </div>
 
         <div class="row gy-4">
@@ -2483,17 +2415,12 @@
           <div class="col-xl-4 col-md-6 team-column">
             <article class="team-card">
               <div class="pic">
-                <img src="assets/img/team/team-1.jpg"
-                  alt="Manikantan R, Founder and Chief Technology Officer"
-                  loading="lazy" decoding="async">
+                <img src="assets/img/team/team-1.jpg" alt="Manikantan R, Founder and Chief Technology Officer" loading="lazy" decoding="async">
               </div>
               <div class="team-info">
                 <h3>Manikantan R Ex-IISc</h3>
                 <span class="role">Founder &amp; Chief Technology Officer</span>
-                <p>
-                  Leads engineering and product development across embedded
-                  systems, IoT, PCB design, rapid prototyping and applied R&amp;D.
-                </p>
+                <p>Leads engineering and product development across embedded systems, IoT, PCB design, rapid prototyping and applied R&amp;D.</p>
               </div>
             </article>
           </div>
@@ -2501,16 +2428,12 @@
           <div class="col-xl-4 col-md-6 team-column">
             <article class="team-card">
               <div class="pic">
-                <img src="assets/img/team/team-2.jpg"
-                  alt="Dr. Amithkumar Gajakosh" loading="lazy" decoding="async">
+                <img src="assets/img/team/team-2.jpg" alt="Dr. Amithkumar Gajakosh" loading="lazy" decoding="async">
               </div>
               <div class="team-info">
                 <h3>Dr. Amithkumar Gajakosh</h3>
                 <span class="role">Co-Founder &amp; Managing Director</span>
-                <p>
-                  Supports product development strategy, business development,
-                  commercialization planning and organizational growth.
-                </p>
+                <p>Supports product development strategy, business development, commercialization planning and organizational growth.</p>
               </div>
             </article>
           </div>
@@ -2518,16 +2441,12 @@
           <div class="col-xl-4 col-md-6 team-column">
             <article class="team-card">
               <div class="pic">
-                <img src="assets/img/team/team-3.jpg"
-                  alt="Dr. Sudir P" loading="lazy" decoding="async">
+                <img src="assets/img/team/team-3.jpg" alt="Dr. Sudir P" loading="lazy" decoding="async">
               </div>
               <div class="team-info">
                 <h3>Dr. Sudir P</h3>
                 <span class="role">Board Member</span>
-                <p>
-                  Contributes to technical review, documentation, validation
-                  and research-related assessment.
-                </p>
+                <p>Contributes to technical review, documentation, validation and research-related assessment.</p>
               </div>
             </article>
           </div>
@@ -2535,33 +2454,12 @@
           <div class="col-xl-4 col-md-6 team-column">
             <article class="team-card">
               <div class="pic">
-                <img src="assets/img/team/team-4.jpg"
-                  alt="Vinita Gopal" loading="lazy" decoding="async">
+                <img src="assets/img/team/team-4.jpg" alt="Vinita Gopal" loading="lazy" decoding="async">
               </div>
               <div class="team-info">
                 <h3>Vinita Gopal</h3>
                 <span class="role">Accounting Manager &amp; Client Acquisition Partner</span>
-                <p>
-                  Supports financial operations, client relationships,
-                  business coordination and partnership development.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-xl-4 col-md-6 team-column">
-            <article class="team-card">
-              <div class="pic">s
-                <img src="assets/img/team/team-5.jpg"
-                  alt="Mr. Krishna Kumar M" loading="lazy" decoding="async">
-              </div>
-              <div class="team-info">
-                <h3>Mr. Krishna Kumar M Ex-IISc</h3>
-                <span class="role">Chief Research Mentor</span>
-                <p>
-                  Supports research review, technical assessment, performance
-                  validation and research and development guidance.
-                </p>
+                <p>Supports financial operations, client relationships, business coordination and partnership development.</p>
               </div>
             </article>
           </div>
@@ -2569,18 +2467,25 @@
           <div class="col-xl-4 col-md-6 team-column">
             <article class="team-card">
               <div class="pic">
-                <img src="assets/img/team/team-6.jpg"
-                  alt="Shanmugam, 3D Printing and Additive Manufacturing Specialist"
-                  loading="lazy" decoding="async">
+                <img src="assets/img/team/team-5.jpg" alt="Mr. Krishna Kumar M" loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Mr. Krishna Kumar M Ex-IISc</h3>
+                <span class="role">Chief Research Mentor</span>
+                <p>Supports research review, technical assessment, performance validation and research and development guidance.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-6.jpg" alt="Shanmugam, 3D Printing and Additive Manufacturing Specialist" loading="lazy" decoding="async">
               </div>
               <div class="team-info">
                 <h3>Shanmugam</h3>
                 <span class="role">3D Printing &amp; Additive Manufacturing Specialist</span>
-                <p>
-                  Handles 3D printer operation, machine setup, print preparation,
-                  material handling, print monitoring and post-processing to
-                  support rapid prototyping and product development.
-                </p>
+                <p>Handles 3D printer operation, machine setup, print preparation, material handling, print monitoring and post-processing to support rapid prototyping and product development.</p>
               </div>
             </article>
           </div>
@@ -2589,7 +2494,7 @@
       </div>
     </section>
 
-    <!-- ==================== FAQ ==================== -->
+    <!-- FAQ -->
     <section id="home-faq">
       <div class="container" data-aos="fade-up">
 
@@ -2662,16 +2567,13 @@
       </div>
     </section>
 
-    <!-- ==================== CONTACT ==================== -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Contact Protonical Researchers Hub</h2>
-          <p>
-            Tell us about your engineering project, prototype, training
-            requirement or research enquiry.
-          </p>
+          <p>Tell us about your engineering project, prototype, training requirement or research enquiry.</p>
         </div>
 
         <div class="row g-4 align-items-stretch">
@@ -2685,7 +2587,7 @@
                   <h3>Office Location</h3>
                   <p>
                     <a href="https://www.google.com/maps/place/13%C2%B003'53.6%22N+77%C2%B043'02.4%22E/@13.0648975,77.715106,17z"
-                      target="_blank" rel="noopener noreferrer">
+                       target="_blank" rel="noopener noreferrer">
                       Bidarahalli, Bengaluru, Karnataka – 560049, India
                     </a>
                   </p>
@@ -2711,7 +2613,7 @@
                   <p><a href="tel:+919880470904">+91 98804 70904</a></p>
                   <p>
                     <a href="https://wa.me/919880470904?text=Hello%20Protonical%20Researchers%20Hub%2C%20I%20would%20like%20to%20discuss%20a%20project."
-                      target="_blank" rel="noopener noreferrer">
+                       target="_blank" rel="noopener noreferrer">
                       <i class="bi bi-whatsapp"></i> Chat on WhatsApp
                     </a>
                   </p>
@@ -2725,10 +2627,7 @@
             <div class="contact-form-card">
 
               <h3>Tell Us About Your Project</h3>
-              <p>
-                Share a few details so our team can understand how to help.
-                Project details are optional.
-              </p>
+              <p>Share a few details so our team can understand how to help. Project details are optional.</p>
 
               <form id="projectContactForm">
                 <div class="row g-3">
@@ -2810,7 +2709,7 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="container">
       <div class="footer-bottom">
@@ -2820,7 +2719,7 @@
         </div>
         <div class="credits">
           <a href="https://www.linkedin.com/in/manikantan-r-632391257/"
-            target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer">
             Connect with us on LinkedIn
           </a>
         </div>
@@ -2828,14 +2727,14 @@
     </div>
   </footer>
 
-  <div id="preloader"></div>
+  <!-- No preloader element here: the site must never be blocked by a stuck loader. -->
 
   <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"
-    aria-label="Back to top">
+     aria-label="Back to top">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- ==================== VENDOR JAVASCRIPT ==================== -->
+  <!-- VENDOR JAVASCRIPT -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -2845,7 +2744,23 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- ==================== INTERNSHIP FORM SUBMISSION ==================== -->
+  <!-- AOS safety check: content remains visible if animation initialization fails. -->
+  <script>
+    (function () {
+      function markAOSReady() {
+        if (document.querySelector('[data-aos].aos-init')) {
+          document.documentElement.classList.add('aos-ready');
+        }
+      }
+
+      window.addEventListener('load', function () {
+        markAOSReady();
+        window.setTimeout(markAOSReady, 250);
+      }, { once: true });
+    })();
+  </script>
+
+  <!-- INTERNSHIP FORM SUBMISSION -->
   <script>
   (function () {
     const form = document.getElementById('internshipApplicationForm');
@@ -2985,7 +2900,7 @@
   })();
   </script>
 
-  <!-- ==================== CONTACT FORM SUBMISSION ==================== -->
+  <!-- CONTACT FORM SUBMISSION -->
   <script>
   (function () {
     const form = document.getElementById('projectContactForm');
@@ -3115,10 +3030,11 @@
   })();
   </script>
 
-  <!-- Dynamic copyright year -->
+  <!-- DYNAMIC COPYRIGHT YEAR -->
   <script>
     (function () {
       const yearElement = document.getElementById('copyright-year');
+
       if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
       }

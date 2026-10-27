@@ -1,257 +1,3134 @@
-/**
-* Template Name: Arsha - v4.3.0
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
-  "use strict";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
+  <title>Protonical Researchers Hub | R&D, IoT, AI, Training & Prototyping</title>
+  <meta name="description" content="Protonical Researchers Hub in Bengaluru provides embedded systems, IoT, AI/ML, PCB design, 3D printing, engineering projects, internships, industrial training and product R&D.">
+  <meta name="keywords" content="Protonical Researchers Hub, embedded systems Bangalore, IoT development Bengaluru, AI ML development, PCB design, 3D printing, rapid prototyping, engineering projects, final year projects, industrial training, internships, school robotics, STEM training, MSME R&D, product development, faculty development, engineering training kits">
+  <meta name="author" content="Protonical Researchers Hub">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://researchershub.in/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Protonical Researchers Hub">
+  <meta property="og:title" content="Protonical Researchers Hub | R&D, Training & Prototyping">
+  <meta property="og:description" content="Engineering R&D, embedded systems, IoT, AI/ML, PCB design, 3D printing, student projects and technical training in Bengaluru, India.">
+  <meta property="og:url" content="https://researchershub.in/">
+  <meta property="og:image" content="https://researchershub.in/assets/img/hero-img.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Protonical Researchers Hub">
+  <meta name="twitter:description" content="Embedded systems, IoT, AI/ML, PCB design, student projects, industrial training and prototyping in Bengaluru, India.">
+  <meta name="twitter:image" content="https://researchershub.in/assets/img/hero-img.png">
+
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Jost:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://researchershub.in/#organization",
+        "name": "Protonical Researchers Hub",
+        "url": "https://researchershub.in/",
+        "logo": "https://researchershub.in/assets/img/logo.png",
+        "description": "Bengaluru-based research and engineering company providing embedded systems, IoT, AI/ML integration, PCB design, rapid prototyping, training and product development.",
+        "email": "researchershub05@gmail.com",
+        "telephone": "+91-9880470904",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bidarahalli",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560049",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9880470904",
+          "email": "researchershub05@gmail.com",
+          "contactType": "customer support",
+          "areaServed": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Manikantan R"
+        },
+        "knowsAbout": [
+          "Embedded Systems",
+          "Internet of Things",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "PCB Design",
+          "Rapid Prototyping",
+          "Product Engineering",
+          "Hardware Development",
+          "Software Development",
+          "3D Design and Printing",
+          "Industrial Training",
+          "Final-Year Engineering Projects",
+          "Research and Development",
+          "School STEM Education",
+          "Industry-Academia Collaboration"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://researchershub.in/#website",
+        "url": "https://researchershub.in/",
+        "name": "Protonical Researchers Hub",
+        "publisher": {
+          "@id": "https://researchershub.in/#organization"
+        },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://researchershub.in/#webpage",
+        "url": "https://researchershub.in/",
+        "name": "Protonical Researchers Hub | R&D, Training & Prototyping",
+        "isPartOf": {
+          "@id": "https://researchershub.in/#website"
+        },
+        "about": {
+          "@id": "https://researchershub.in/#organization"
+        },
+        "inLanguage": "en-IN"
+      }
+    ]
   }
+  </script>
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
+  <style>
+    :root {
+      --prh-navy: #08263d;
+      --prh-navy-light: #123b59;
+      --prh-blue: #0787d8;
+      --prh-cyan: #35b5e8;
+      --prh-text: #25384a;
+      --prh-muted: #607184;
+      --prh-light: #f3f8fc;
+      --prh-border: #e1eaf2;
+      --prh-shadow: 0 10px 30px rgba(16, 46, 73, 0.08);
+    }
+
+    /* =========================
+       GLOBAL RESPONSIVE LAYOUT
+       ========================= */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100%;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      color: var(--prh-text);
+      line-height: 1.75;
+      overflow-x: clip;
+    }
+
+    img,
+    video,
+    iframe,
+    svg {
+      max-width: 100%;
+    }
+
+    a {
+      transition: color .2s ease, background .2s ease;
+    }
+
+    main,
+    #main,
+    section {
+      width: 100%;
+      min-width: 0;
+    }
+
+    section {
+      padding: clamp(48px, 5vw, 78px) 0;
+      scroll-margin-top: 96px;
+      overflow: hidden;
+    }
+
+    /* Override Bootstrap fixed container widths */
+    .container {
+      width: 100% !important;
+      max-width: 1600px !important;
+      margin-right: auto !important;
+      margin-left: auto !important;
+      padding-right: clamp(16px, 3vw, 40px) !important;
+      padding-left: clamp(16px, 3vw, 40px) !important;
+    }
+
+    .row {
+      --bs-gutter-x: clamp(16px, 2vw, 30px);
+      --bs-gutter-y: clamp(16px, 2vw, 30px);
+    }
+
+    .row > [class*="col-"] {
+      min-width: 0;
+    }
+
+    .section-title {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-bottom: clamp(24px, 3vw, 38px);
+      text-align: center;
+    }
+
+    .section-title h2 {
+      position: relative;
+      margin-bottom: 18px;
+      padding-bottom: 20px;
+      color: var(--prh-navy);
+      font-size: clamp(25px, 2.7vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .section-title h2::before {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: calc(50% - 60px);
+      display: block;
+      width: 120px;
+      height: 1px;
+      background: #ddd;
+    }
+
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 20px);
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--prh-cyan);
+    }
+
+    .section-title p {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      color: var(--prh-muted);
+      font-size: clamp(14px, 1vw, 16px);
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+
+    /* =========================
+       HEADER AND NAVIGATION
+       ========================= */
+    #header,
+    #header.fixed-top,
+    #header.header-scrolled,
+    #header.header-inner-pages {
+      width: 100%;
+      min-height: 82px !important;
+      padding: 0 !important;
+      background: #fff !important;
+      box-shadow: 0 3px 20px rgba(10, 35, 57, .09);
+      z-index: 997;
+    }
+
+    #header .container {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: clamp(12px, 2vw, 28px) !important;
+      min-height: 82px !important;
+    }
+
+    #header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      max-width: 360px;
+      flex: 0 1 auto;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    #header .logo img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80px;
+      max-height: 62px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .brand-wordmark {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      color: var(--prh-navy);
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .brand-wordmark strong {
+      font-family: "Jost", sans-serif;
+      font-size: clamp(14px, 1.2vw, 20px);
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .brand-wordmark span {
+      margin-top: 5px;
+      color: var(--prh-blue);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+    }
+
+    #header .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-width: 0;
+      flex: 1 1 auto;
+      padding: 0;
+    }
+
+    #header .navbar ul {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(0px, .4vw, 6px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #header .navbar li {
+      position: relative;
+      min-width: 0;
+    }
+
+    #header .navbar a,
+    #header .navbar a:focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px clamp(5px, .7vw, 12px) !important;
+      color: #18364f !important;
+      font-size: clamp(12px, .9vw, 15px) !important;
+      font-weight: 600;
+      line-height: 1.4;
+      white-space: nowrap;
+      transition: color .3s ease, background .3s ease;
+    }
+
+    #header .navbar a:hover,
+    #header .navbar .active,
+    #header .navbar li:hover > a {
+      color: var(--prh-blue) !important;
+    }
+
+    #header .navbar .internship-nav-cta {
+      justify-content: center;
+      margin-left: 4px !important;
+      padding: 11px clamp(10px, 1vw, 16px) !important;
+      border: 2px solid var(--prh-blue);
+      border-radius: 8px;
+      background: var(--prh-blue);
+      color: #fff !important;
+      font-weight: 700;
+    }
+
+    #header .navbar .internship-nav-cta:hover {
+      border-color: #056cb0;
+      background: #056cb0;
+      color: #fff !important;
+    }
+
+    #header .mobile-nav-toggle,
+    .mobile-nav-toggle {
+      display: none;
+      flex: 0 0 auto;
+      color: var(--prh-navy) !important;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    /* Mobile menu, compatible with the template's main.js toggle */
+    .navbar-mobile {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      overflow: hidden;
+      background: rgba(4, 24, 42, .35);
+    }
+
+    .navbar-mobile .mobile-nav-toggle {
+      position: fixed;
+      top: 22px;
+      right: 20px;
+      z-index: 1001;
+      display: block;
+    }
+
+    .navbar-mobile ul {
+      display: block;
+      position: fixed;
+      top: 75px;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      overflow-y: auto;
+      margin: 0;
+      padding: 16px;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 15px 45px rgba(4, 24, 42, .22);
+    }
+
+    .navbar-mobile li {
+      width: 100%;
+    }
+
+    .navbar-mobile a,
+    .navbar-mobile a:focus {
+      display: flex;
+      width: 100%;
+      padding: 13px 14px !important;
+      color: #18364f !important;
+      font-size: 15px !important;
+      line-height: 1.5;
+      white-space: normal;
+    }
+
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover > a {
+      color: var(--prh-blue) !important;
+    }
+
+    .navbar-mobile .internship-nav-cta {
+      justify-content: center;
+      margin: 8px 0 !important;
+      color: #fff !important;
+    }
+
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 12px;
+      padding: 10px 0;
+      box-shadow: 0 0 20px rgba(127, 137, 161, .15);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .navbar-mobile .dropdown > .dropdown-active {
+      display: block;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+    #hero {
+      position: relative;
+      display: flex !important;
+      align-items: center !important;
+      width: 100%;
+      height: auto !important;
+      min-height: clamp(570px, calc(100svh - 82px), 780px) !important;
+      padding: clamp(112px, 9vw, 145px) 0 clamp(48px, 5vw, 72px) !important;
+      overflow: hidden;
+      background: radial-gradient(
+        circle at 75% 30%,
+        #165b81 0%,
+        #0a3655 34%,
+        #061b2e 76%,
+        #041321 100%
+      );
+    }
+
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(3, 20, 36, .95),
+        rgba(4, 29, 49, .85) 50%,
+        rgba(4, 29, 49, .12)
+      );
+      pointer-events: none;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 1;
+      width: 100% !important;
+      max-width: 1600px !important;
+      padding-top: 0 !important;
+    }
+
+    #hero .row {
+      align-items: center;
+    }
+
+    #hero .row > [class*="col-"] {
+      min-width: 0;
+    }
+
+    #hero .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      margin-bottom: 18px;
+      color: #4cc9ff;
+      font-size: clamp(10px, .85vw, 12px);
+      font-weight: 800;
+      line-height: 1.6;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    #hero .hero-eyebrow::before {
+      content: "";
+      flex: 0 0 27px;
+      width: 27px;
+      height: 2px;
+      background: var(--prh-cyan);
+    }
+
+    #hero h1 {
+      max-width: 760px;
+      margin: 0 0 20px;
+      color: #fff;
+      font-size: clamp(34px, 4.2vw, 64px) !important;
+      font-weight: 800;
+      line-height: 1.08 !important;
+      letter-spacing: -.7px;
+      overflow-wrap: anywhere;
+    }
+
+    #hero h1 .accent {
+      color: #35b5f0;
+    }
+
+    #hero h2 {
+      margin-bottom: clamp(16px, 2vw, 26px) !important;
+      color: #e1edf6;
+      font-size: clamp(19px, 2vw, 30px) !important;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    #hero .hero-tagline {
+      margin-bottom: 12px;
+      color: #73d8ff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    #hero .hero-description {
+      width: 100%;
+      max-width: 650px;
+      margin-bottom: 0;
+      color: #d2e0eb;
+      font-size: clamp(14px, 1.05vw, 16px);
+      line-height: 1.8;
+    }
+
+    #hero .hero-img {
+      min-width: 0;
+      padding-left: clamp(0px, 1.6vw, 24px) !important;
+    }
+
+    /* Enlarged desktop hero image */
+    #hero .hero-img img {
+      display: block;
+      width: 110% !important;
+      max-width: 720px !important;
+      height: auto;
+      max-height: min(60vw, 620px) !important;
+      margin: 0 0 0 -5%;
+      object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 15px 32px rgba(0, 0, 0, .2));
+      animation: none;
+    }
+
+    .hero-cta-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: clamp(20px, 2.5vw, 30px);
+    }
+
+    .prh-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 13px 20px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      font-family: "Jost", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      transition: all .2s ease;
+    }
+
+    .prh-button-primary {
+      border-color: var(--prh-blue);
+      background: var(--prh-blue);
+      color: #fff;
+      box-shadow: 0 7px 20px rgba(0, 115, 210, .2);
+    }
+
+    .prh-button-primary:hover {
+      border-color: #056cb0;
+      background: #056cb0;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .prh-button-outline {
+      border-color: rgba(255, 255, 255, .8);
+      color: #fff;
+    }
+
+    .prh-button-outline:hover {
+      background: #fff;
+      color: var(--prh-navy);
+    }
+
+    /* =========================
+       ABOUT
+       ========================= */
+    #about {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: #fff;
+    }
+
+    #about p {
+      color: #4c6072;
+      font-size: 16px;
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+
+    #about h3 {
+      color: var(--prh-navy);
+      font-weight: 800;
+    }
+
+    .about-list {
+      margin-bottom: 0;
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .about-list li {
+      padding: 7px 0;
+      color: #34516a;
+      line-height: 1.7;
+    }
+
+    .about-list li::marker {
+      color: var(--prh-blue);
+    }
+
+    /* =========================
+       WHY CHOOSE US
+       ========================= */
+    #why-us {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: var(--prh-light);
+    }
+
+    .why-card {
+      height: 100%;
+      padding: clamp(20px, 2vw, 28px);
+      border: 1px solid var(--prh-border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: var(--prh-shadow);
+    }
+
+    .why-card i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 17px;
+      border-radius: 13px;
+      background: #eaf6ff;
+      color: var(--prh-blue);
+      font-size: 25px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 12px;
+      color: var(--prh-navy);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .why-card p {
+      margin: 0;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    /* =========================
+       SERVICES
+       ========================= */
+    #services {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: #fff;
+    }
+
+    #services .row {
+      align-items: stretch;
+    }
+
+    #services .icon-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      padding: clamp(22px, 2.2vw, 30px);
+      border: 1px solid var(--prh-border);
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(25, 55, 85, .055);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    #services .icon-box:hover {
+      transform: translateY(-4px);
+      border-color: #b7dff5;
+      box-shadow: 0 15px 35px rgba(25, 75, 115, .12);
+    }
+
+    #services .service-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      flex: 0 0 56px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e5f5ff, #f3f9ff);
+      color: var(--prh-blue);
+      font-size: 27px;
+    }
+
+    #services .icon-box h4 {
+      margin: 0 0 12px;
+      color: #17324d;
+      font-size: clamp(17px, 1.35vw, 20px);
+      font-weight: 700;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    #services .icon-box h4 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #services .icon-box h4 a:hover {
+      color: var(--prh-blue);
+    }
+
+    #services .icon-box p {
+      margin: 0 0 16px;
+      color: #596a7b;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    #services .service-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--prh-blue);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: color .2s ease, gap .2s ease;
+    }
+
+    #services .service-read-more:hover {
+      gap: 12px;
+      color: #056cb0;
+    }
+
+    #services .service-read-more i {
+      font-size: 17px;
+    }
+
+    /* =========================
+       PROGRAMS
+       ========================= */
+    #programs {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: var(--prh-light);
+    }
+
+    .program-card {
+      height: 100%;
+      padding: clamp(20px, 2vw, 28px);
+      border: 1px solid var(--prh-border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 7px 22px rgba(25, 55, 85, .045);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--prh-shadow);
+    }
+
+    .program-card .program-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 16px;
+      border-radius: 13px;
+      background: #eaf6ff;
+      color: var(--prh-blue);
+      font-size: 24px;
+    }
+
+    .program-card h3 {
+      margin-bottom: 10px;
+      color: var(--prh-navy);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .program-card p {
+      margin-bottom: 13px;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .program-card a {
+      color: var(--prh-blue);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* =========================
+       PORTFOLIO
+       ========================= */
+    #portfolio {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: #fff;
+    }
+
+    #portfolio .portfolio-item {
+      display: flex;
+      min-width: 0;
+      margin-bottom: 24px;
+    }
+
+    #portfolio .portfolio-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--prh-border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(20, 51, 78, .07);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    #portfolio .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 32px rgba(20, 51, 78, .13);
+    }
+
+    #portfolio .portfolio-img {
+      width: 100%;
+      height: clamp(180px, 18vw, 260px);
+      overflow: hidden;
+      background: #edf3f7;
+    }
+
+    #portfolio .portfolio-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    #portfolio .portfolio-card:hover .portfolio-img img {
+      transform: scale(1.04);
+    }
+
+    #portfolio .portfolio-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding: 20px;
+    }
+
+    #portfolio .portfolio-info h3 {
+      margin-bottom: 8px;
+      color: var(--prh-navy);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    #portfolio .portfolio-info p {
+      margin: 0;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       LEADERSHIP & RESEARCH TEAM
+       ========================= */
+    #team {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: var(--prh-light);
+    }
+
+    #team .row {
+      align-items: stretch;
+    }
+
+    #team .team-column {
+      display: flex;
+      min-width: 0;
+    }
+
+    #team .team-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      padding: clamp(14px, 1.4vw, 20px);
+      overflow: hidden;
+      border: 1px solid var(--prh-border);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 7px 24px rgba(20, 51, 78, .06);
+      transition: box-shadow .25s ease;
+    }
+
+    #team .team-card:hover {
+      box-shadow: 0 16px 35px rgba(20, 51, 78, .12);
+    }
+
+    #team .team-card .pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: clamp(200px, 19vw, 280px);
+      flex: 0 0 clamp(200px, 19vw, 280px);
+      margin-bottom: 18px;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    #team .team-card .pic img {
+      display: block;
+      width: auto !important;
+      height: auto !important;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain !important;
+      object-position: center center;
+      border-radius: 14px;
+      background: #fff;
+      transition: none !important;
+    }
+
+    #team .team-card:hover .pic img {
+      transform: none !important;
+    }
+
+    #team .team-info {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    #team .team-card h3 {
+      margin: 0 0 8px;
+      color: var(--prh-navy);
+      font-size: clamp(16px, 1.35vw, 20px);
+      font-weight: 800;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    #team .team-card .role {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--prh-blue);
+      font-size: clamp(12px, .95vw, 14px);
+      font-weight: 800;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    #team .team-card p {
+      margin: 0;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    /* =========================
+       INTERNSHIP APPLICATION
+       ========================= */
+    #internship-apply {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: #f3f5fa;
+    }
+
+    .internship-form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.35fr);
+      gap: clamp(18px, 3vw, 36px);
+      align-items: start;
+    }
+
+    .internship-intro {
+      min-width: 0;
+      padding: 20px 8px 20px 0;
+    }
+
+    .internship-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+      color: var(--prh-blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    .internship-intro h3 {
+      margin-bottom: 16px;
+      color: var(--prh-navy);
+      font-size: clamp(25px, 2.5vw, 32px);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .internship-intro p {
+      color: var(--prh-muted);
+      line-height: 1.85;
+    }
+
+    .internship-intro ul {
+      margin: 23px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .internship-intro ul li {
+      margin: 12px 0;
+      color: #34516a;
+      font-weight: 600;
+    }
+
+    .internship-intro ul i {
+      margin-right: 8px;
+      color: var(--prh-blue);
+    }
+
+    .internship-note {
+      padding: 13px 15px;
+      border-left: 3px solid var(--prh-blue);
+      border-radius: 4px;
+      background: #fff;
+      font-size: 13px;
+    }
+
+    .internship-form-card {
+      width: 100%;
+      min-width: 0;
+      padding: clamp(20px, 2.5vw, 30px);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: var(--prh-shadow);
+    }
+
+    #internshipApplicationForm .form-group {
+      margin-bottom: 17px;
+    }
+
+    #internshipApplicationForm label {
+      display: block;
+      margin-bottom: 7px;
+      color: #25435c;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    #internshipApplicationForm label span {
+      color: #d9534f;
+    }
+
+    #internshipApplicationForm .form-control {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      min-height: 46px;
+      padding: 10px 12px;
+      border: 1px solid #d9e0ec;
+      border-radius: 7px;
+      font-size: 14px;
+      box-shadow: none;
+    }
+
+    #internshipApplicationForm .form-control:focus {
+      border-color: var(--prh-blue);
+      box-shadow: 0 0 0 3px rgba(7, 135, 216, .12);
+    }
+
+    #internshipApplicationForm textarea.form-control {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    #internshipApplicationForm small {
+      display: block;
+      margin-top: 6px;
+      color: var(--prh-muted);
+      font-size: 12px;
+    }
+
+    #internshipApplicationForm .internship-consent label {
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    #internshipApplicationForm .internship-consent input {
+      margin-right: 7px;
+      accent-color: var(--prh-blue);
+    }
+
+    .internship-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--prh-blue);
+      color: #fff;
+      font-family: "Jost", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .internship-submit-btn:hover {
+      background: #056cb0;
+    }
+
+    .internship-submit-btn:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
+    .internship-form-status {
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .internship-form-status.is-warning {
+      padding: 12px;
+      border-radius: 6px;
+      background: #fff6df;
+      color: #8a5a00;
+    }
+
+    .internship-form-status.is-success {
+      padding: 12px;
+      border-radius: 6px;
+      background: #eaf7ef;
+      color: #176b3a;
+    }
+
+    .internship-required-note {
+      margin-top: 10px;
+      color: var(--prh-muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       FAQ
+       ========================= */
+    #home-faq {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: #fff;
+    }
+
+    .faq-list {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .faq-list details {
+      margin-bottom: 12px;
+      overflow: hidden;
+      border: 1px solid var(--prh-border);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .faq-list summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 18px 22px;
+      color: var(--prh-navy);
+      font-family: "Jost", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.5;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: var(--prh-blue);
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list .faq-answer {
+      padding: 0 22px 20px;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    /* =========================
+       CONTACT
+       ========================= */
+    #contact {
+      padding: clamp(48px, 5vw, 78px) 0;
+      background: var(--prh-light);
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      padding: clamp(20px, 2.5vw, 30px);
+      border: 1px solid var(--prh-border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: var(--prh-shadow);
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 26px;
+    }
+
+    .contact-info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-info-item > i {
+      display: flex;
+      flex: 0 0 46px;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: #eaf6ff;
+      color: var(--prh-blue);
+      font-size: 22px;
+    }
+
+    .contact-info-item h3 {
+      margin-bottom: 5px;
+      color: var(--prh-navy);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .contact-info-item p {
+      margin-bottom: 6px;
+      color: var(--prh-muted);
+      font-size: 14px;
+      line-height: 1.75;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-info-item a {
+      color: var(--prh-blue);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form-card h3 {
+      margin-bottom: 8px;
+      color: var(--prh-navy);
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .contact-form-card > p {
+      margin-bottom: 22px;
+      color: var(--prh-muted);
+      font-size: 14px;
+    }
+
+    .contact-form-card label {
+      display: block;
+      margin-bottom: 7px;
+      color: #25435c;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact-form-card .form-control,
+    .contact-form-card .form-select {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      min-height: 47px;
+      border: 1px solid #d9e0ec;
+      border-radius: 7px;
+      box-shadow: none;
+    }
+
+    .contact-form-card .form-control:focus,
+    .contact-form-card .form-select:focus {
+      border-color: var(--prh-blue);
+      box-shadow: 0 0 0 3px rgba(7, 135, 216, .12);
+    }
+
+    .contact-form-card textarea.form-control {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .btn-contact {
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--prh-blue);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .btn-contact:hover {
+      background: #056cb0;
+      color: #fff;
+    }
+
+    .contact-form-note {
+      margin-top: 12px;
+      color: var(--prh-muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+    #footer {
+      padding: 25px 0;
+      background: #061c2e;
+      color: #d6e4ef;
+      font-size: 13px;
+    }
+
+    #footer a {
+      color: #6fcfff;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .back-to-top {
+      background: var(--prh-blue);
+      border-radius: 8px;
+    }
+
+    /* =========================
+       RESPONSIVE BREAKPOINTS
+       ========================= */
+
+    /* Small desktop and laptop widths */
+    @media (max-width: 1399px) {
+      .container,
+      #hero .container {
+        max-width: 1320px !important;
+      }
+
+      #header .navbar a,
+      #header .navbar a:focus {
+        padding-right: 7px !important;
+        padding-left: 7px !important;
+      }
+    }
+
+    /* Replace desktop navigation with mobile menu before links collide */
+    @media (max-width: 1100px) {
+      #header,
+      #header.fixed-top,
+      #header.header-scrolled {
+        min-height: 78px !important;
+      }
+
+      #header .container {
+        min-height: 78px !important;
+      }
+
+      #header .mobile-nav-toggle,
+      .mobile-nav-toggle {
+        display: block !important;
+      }
+
+      #header .navbar > ul {
+        display: none !important;
+      }
+
+      #header .navbar.navbar-mobile > ul {
+        display: block !important;
+      }
+
+      #hero {
+        height: auto !important;
+        min-height: 0 !important;
+        padding-top: 125px !important;
+        padding-bottom: 60px !important;
+        text-align: center;
+      }
+
+      #hero .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #hero .hero-img {
+        padding: 0 0 22px !important;
+        text-align: center;
+      }
+
+      #hero .hero-img img {
+        width: min(90%, 560px) !important;
+        max-width: 560px !important;
+        max-height: min(75vw, 420px) !important;
+        margin: 0 auto;
+      }
+
+      #hero::before {
+        background: linear-gradient(
+          180deg,
+          rgba(3, 20, 36, .95),
+          rgba(4, 29, 49, .86)
+        );
+      }
+
+      .hero-cta-wrap {
+        justify-content: center;
+      }
+
+      .internship-form-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .internship-intro {
+        padding: 0;
+      }
+    }
+
+    /* Tablets */
+    @media (max-width: 991px) {
+      #team .team-card .pic {
+        height: 300px;
+        flex-basis: 300px;
+      }
+
+      #services .icon-box {
+        min-height: 0;
+      }
+    }
+
+    /* Phones and small tablets */
+    @media (max-width: 767px) {
+      .container {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+      }
+
+      section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(24px, 6vw, 32px);
+        line-height: 1.2;
+      }
+
+      .section-title p {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      #hero {
+        padding-top: 108px !important;
+        padding-bottom: 45px !important;
+        text-align: center;
+      }
+
+      #hero h1 {
+        font-size: clamp(31px, 8vw, 44px) !important;
+        line-height: 1.12 !important;
+        letter-spacing: -.5px;
+      }
+
+      #hero h2 {
+        margin-bottom: 15px !important;
+        font-size: clamp(18px, 4.7vw, 23px) !important;
+        line-height: 1.4;
+      }
+
+      #hero .hero-eyebrow {
+        justify-content: center;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      #hero .hero-img {
+        padding: 0 0 20px !important;
+      }
+
+      #hero .hero-img img {
+        width: min(90%, 420px) !important;
+        max-width: 420px !important;
+        max-height: min(80vw, 340px) !important;
+        margin: 0 auto;
+      }
+
+      #hero .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .hero-cta-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero-cta-wrap .prh-button {
+        width: 100%;
+      }
+
+      #portfolio .portfolio-img {
+        height: clamp(190px, 58vw, 300px);
+      }
+
+      #team .team-card .pic {
+        height: clamp(220px, 70vw, 320px);
+        flex-basis: clamp(220px, 70vw, 320px);
+      }
+
+      .internship-form-card,
+      .contact-info-card,
+      .contact-form-card {
+        padding: 22px 17px;
+      }
+
+      .faq-list summary {
+        padding: 16px;
+        font-size: 15px;
+      }
+
+      .faq-list .faq-answer {
+        padding: 0 16px 17px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    /* Narrow phones */
+    @media (max-width: 420px) {
+      #header .logo {
+        max-width: 235px;
+        gap: 8px;
+      }
+
+      #header .logo img {
+        max-width: 48px;
+        max-height: 43px;
+      }
+
+      .brand-wordmark strong {
+        font-size: 13px;
+        letter-spacing: 0;
+      }
+
+      .brand-wordmark span {
+        font-size: 7px;
+        letter-spacing: .8px;
+      }
+
+      #hero {
+        padding-top: 100px !important;
+      }
+
+      #hero .hero-img img {
+        width: min(90%, 360px) !important;
+        max-width: 360px !important;
+        max-height: min(76vw, 300px) !important;
+      }
+
+      #hero .hero-eyebrow {
+        font-size: 9px;
+      }
+
+      .prh-button {
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
+      #team .team-card .pic {
+        height: 260px;
+        flex-basis: 260px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto" aria-label="Protonical Researchers Hub home">
+        <img src="assets/img/logo.png" alt="Protonical Researchers Hub logo" class="img-fluid">
+        <span class="brand-wordmark">
+          <strong>PROTONICAL</strong>
+          <span>RESEARCHERS HUB</span>
+        </span>
+      </a>
+
+      <nav id="navbar" class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Our Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto internship-nav-cta" href="#internship-apply">Apply for Internship</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle" aria-label="Open navigation menu"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up">
+          <div class="hero-eyebrow">Protonical Researchers Hub · Bengaluru, India</div>
+
+          <h1>
+            Embedded Systems,<br>
+            IoT &amp; <span class="accent">Product R&amp;D</span>
+          </h1>
+
+          <h2>AI/ML, PCB Design, Prototyping &amp; Engineering Training</h2>
+
+          <p class="hero-tagline">Where ideas take flight, innovation ignites.</p>
+
+          <p class="hero-description">
+            We support students, schools, colleges, researchers, startups and MSMEs
+            through engineering projects, internships, industrial training,
+            embedded systems, software and hardware development, 3D design,
+            prototyping and research and development. International enquiries
+            are welcome, subject to project scope and delivery arrangements.
+          </p>
+
+          <div class="hero-cta-wrap">
+            <a href="#internship-apply" class="prh-button prh-button-primary scrollto">
+              <i class="bi bi-mortarboard-fill"></i> Apply for Internship
+            </a>
+            <a href="#contact" class="prh-button prh-button-outline scrollto">
+              <i class="bi bi-gear-fill"></i> Discuss Your Project
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in">
+          <img
+            src="assets/img/hero-img.png"
+            class="img-fluid"
+            alt="Embedded systems, IoT, AI and product development at Protonical Researchers Hub"
+            fetchpriority="high"
+            decoding="async">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Protonical Researchers Hub</h2>
+          <p>
+            Engineering research, practical development and product prototyping
+            from Bengaluru, India.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <p>
+              <strong>Protonical Researchers Hub</strong> is a Bengaluru-based
+              research, embedded systems and product development organization
+              focused on turning concepts into functional prototypes and
+              practical engineering solutions. We work with students, researchers,
+              startups, MSMEs, educational institutions and industries.
+            </p>
+
+            <p>
+              Our work can cover concept development, hardware and software
+              implementation, PCB design, CAD modelling, 3D printing, prototype
+              testing, technical documentation and product engineering. Scope,
+              deliverables, timelines and responsibilities are agreed for each
+              engagement.
+            </p>
+
+            <p>
+              We also support enquiries related to final-year engineering projects,
+              internships, industrial training, programming and hardware courses,
+              school STEM workshops, robotics activities, faculty development,
+              engineering training kits and industry–academia collaboration.
+            </p>
+
+            <h3 class="mt-4"><strong>Our core technical expertise</strong></h3>
+
+            <div class="row mt-3">
+              <div class="col-lg-6">
+                <ul class="about-list">
+                  <li>Embedded Systems and IoT Development</li>
+                  <li>AI and Machine Learning Integration</li>
+                  <li>Product Design and Hardware Prototyping</li>
+                  <li>PCB Design and Hardware Integration</li>
+                </ul>
+              </div>
+
+              <div class="col-lg-6">
+                <ul class="about-list">
+                  <li>3D Design and Rapid Prototyping</li>
+                  <li>Industrial Electronics and Smart Devices</li>
+                  <li>Research and Development Consulting</li>
+                  <li>Manufacturing and Product Development Guidance</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-4">
+              We consider project requirements across engineering, applied sciences
+              and other interdisciplinary areas where the required expertise and
+              project scope are suitable. For MSME and grant-related enquiries, we
+              can discuss technical feasibility, prototype development and
+              documentation support. Eligibility and funding decisions must be
+              confirmed with the relevant funding authority; funding approval is
+              not guaranteed.
+            </p>
+
+            <p>
+              <strong>
+                At Protonical Researchers Hub, we help turn research ideas into
+                practical engineering outcomes.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section id="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Work With Us?</h2>
+          <p>
+            A practical approach to engineering, research and product development,
+            with project scope and deliverables discussed upfront.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <article class="why-card">
+              <i class="bx bx-chip" aria-hidden="true"></i>
+              <h3>Hardware and Software Together</h3>
+              <p>
+                Integrate microcontrollers, sensors, firmware, wireless
+                communication, software and connected systems within one
+                coordinated development process.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="why-card">
+              <i class="bx bx-cube-alt" aria-hidden="true"></i>
+              <h3>Prototype-Focused Engineering</h3>
+              <p>
+                Move from early concepts to engineering designs, functional
+                prototypes, testing, troubleshooting and technical documentation.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="why-card">
+              <i class="bx bx-book-open" aria-hidden="true"></i>
+              <h3>Research and Training</h3>
+              <p>
+                Discuss student projects, internships, technical workshops,
+                institutional collaboration and R&amp;D requirements based on
+                the needs of each engagement.
+              </p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== INTERNSHIP APPLICATION ==================== -->
+    <section id="internship-apply">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Apply for an Internship</h2>
+          <p>
+            Build practical skills through hands-on engineering, research and
+            product development experience.
+          </p>
+        </div>
+
+        <div class="internship-form-layout">
+
+          <div class="internship-intro">
+            <span class="internship-eyebrow">
+              <i class="bi bi-mortarboard"></i> Student Opportunities
+            </span>
+
+            <h3>Turn your learning into real-world experience.</h3>
+
+            <p>
+              Tell us about your academic background and the area you want to
+              explore. Our team will review your application and contact you
+              if there is a suitable opportunity.
+            </p>
+
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Embedded Systems and IoT</li>
+              <li><i class="bi bi-check-circle-fill"></i> AI, Machine Learning and Robotics</li>
+              <li><i class="bi bi-check-circle-fill"></i> Electronics, PCB and Product Design</li>
+              <li><i class="bi bi-check-circle-fill"></i> Research, Software and Applied Sciences</li>
+            </ul>
+
+            <p class="internship-note">
+              <i class="bi bi-shield-check"></i>
+              Your information is collected to review and respond to your
+              internship application.
+            </p>
+          </div>
+
+          <div class="internship-form-card">
+            <form id="internshipApplicationForm" novalidate>
+              <div class="row">
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantName">Full name <span>*</span></label>
+                  <input type="text" name="fullName" id="applicantName"
+                    class="form-control" placeholder="Enter your full name"
+                    autocomplete="name" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantEmail">Email address <span>*</span></label>
+                  <input type="email" name="email" id="applicantEmail"
+                    class="form-control" placeholder="you@example.com"
+                    autocomplete="email" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantPhone">Mobile number <span>*</span></label>
+                  <input type="tel" name="phone" id="applicantPhone"
+                    class="form-control" placeholder="+91 98765 43210"
+                    autocomplete="tel" inputmode="tel"
+                    pattern="[+0-9() -]{8,20}" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantCollege">College / university <span>*</span></label>
+                  <input type="text" name="college" id="applicantCollege"
+                    class="form-control" placeholder="Institution name"
+                    autocomplete="organization" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantCourse">Degree / course <span>*</span></label>
+                  <input type="text" name="course" id="applicantCourse"
+                    class="form-control" placeholder="e.g. BE, BSc, MSc, MCA, PhD"
+                    required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantYear">Year of study <span>*</span></label>
+                  <select name="yearOfStudy" id="applicantYear" class="form-control" required>
+                    <option value="">Select year</option>
+                    <option>1st year</option>
+                    <option>2nd year</option>
+                    <option>3rd year</option>
+                    <option>4th year</option>
+                    <option>Final year</option>
+                    <option>Recent graduate</option>
+                    <option>Postgraduate / Research scholar</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantDomain">Preferred internship domain <span>*</span></label>
+                  <select name="domain" id="applicantDomain" class="form-control" required>
+                    <option value="">Choose a domain</option>
+                    <option>Embedded Systems and IoT</option>
+                    <option>AI and Machine Learning</option>
+                    <option>Robotics and Automation</option>
+                    <option>Electronics and PCB Design</option>
+                    <option>Product Design and Prototyping</option>
+                    <option>Software and Web Development</option>
+                    <option>Life Sciences / Physical Sciences</option>
+                    <option>Research and Development</option>
+                    <option>Other / Interdisciplinary</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantMode">Preferred mode <span>*</span></label>
+                  <select name="preferredMode" id="applicantMode" class="form-control" required>
+                    <option value="">Choose mode</option>
+                    <option>On-site</option>
+                    <option>Remote</option>
+                    <option>Hybrid</option>
+                    <option>Open to discussion</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantDuration">Preferred duration <span>*</span></label>
+                  <select name="duration" id="applicantDuration" class="form-control" required>
+                    <option value="">Choose duration</option>
+                    <option>2–4 weeks</option>
+                    <option>1–2 months</option>
+                    <option>3 months</option>
+                    <option>3–6 months</option>
+                    <option>Flexible / To be discussed</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="applicantLinkedIn">LinkedIn profile (optional)</label>
+                  <input type="url" name="linkedin" id="applicantLinkedIn"
+                    class="form-control" placeholder="https://www.linkedin.com/in/...">
+                </div>
+
+                <div class="col-12 form-group">
+                  <label for="applicantSkills">Skills, tools or areas of interest <span>*</span></label>
+                  <textarea name="skills" id="applicantSkills" class="form-control"
+                    rows="3" placeholder="Tell us about your skills, projects, tools or research interests"
+                    required></textarea>
+                </div>
+
+                <div class="col-12 form-group">
+                  <label for="applicantResume">Resume / portfolio link (optional)</label>
+                  <input type="url" name="resumeLink" id="applicantResume"
+                    class="form-control"
+                    placeholder="Paste a shareable Google Drive, LinkedIn or portfolio link">
+                  <small>
+                    Ensure your link permissions allow our team to view it.
+                  </small>
+                </div>
+
+                <div class="col-12 form-group">
+                  <label for="applicantMessage">Additional message (optional)</label>
+                  <textarea name="message" id="applicantMessage" class="form-control"
+                    rows="3" placeholder="Anything else you would like us to know?"></textarea>
+                </div>
+
+                <div class="col-12 form-group internship-consent">
+                  <label>
+                    <input type="checkbox" id="applicantConsent" name="consent"
+                      value="yes" required>
+                    I confirm that the information provided is accurate and agree
+                    to be contacted about this internship application. <span>*</span>
+                  </label>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="internship-submit-btn" id="internshipSubmitBtn">
+                    Submit Application <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                  <p id="internshipFormStatus" class="internship-form-status"
+                    role="status" aria-live="polite"></p>
+
+                  <p class="internship-required-note">
+                    Fields marked * are required.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Engineering, Training &amp; R&amp;D Services</h2>
+          <p>
+            Explore our engineering, technical training, prototyping and research
+            services for students, institutions, startups, MSMEs and industry.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-chip"></i></div>
+              <h4>Embedded Systems &amp; IoT Development</h4>
+              <p>Microcontroller programming, embedded firmware, sensors, wireless communication, connected devices and IoT monitoring systems.</p>
+              <a class="service-read-more" href="#contact">Enquire About Service <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-brain"></i></div>
+              <h4>AI &amp; Machine Learning</h4>
+              <p>AI/ML integration for sensor analytics, computer vision, intelligent automation, edge applications and data-driven systems.</p>
+              <a class="service-read-more" href="#contact">Enquire About Service <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-cube-alt"></i></div>
+              <h4>3D Design &amp; Product Prototyping</h4>
+              <p>CAD modelling, mechanical design, enclosures, 3D printing, rapid prototyping and prototype troubleshooting enquiries.</p>
+              <a class="service-read-more" href="#contact">Enquire About Service <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-circuit"></i></div>
+              <h4>PCB Design &amp; Hardware Development</h4>
+              <p>Electronic schematics, PCB layout, component selection, hardware integration, prototype assembly, debugging and validation.</p>
+              <a class="service-read-more" href="#contact">Enquire About Service <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-book-open"></i></div>
+              <h4>Final-Year Projects &amp; Research</h4>
+              <p>Project scoping, feasibility discussions, proof-of-concept development, prototype implementation and technical documentation.</p>
+              <a class="service-read-more" href="#contact">Discuss Your Project <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-file"></i></div>
+              <h4>MSME Project Mentorship &amp; R&amp;D</h4>
+              <p>Technical feasibility, project planning, prototype development, milestone reviews and documentation support. Funding approval is not guaranteed.</p>
+              <a class="service-read-more" href="#contact">Discuss Requirements <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-wrench"></i></div>
+              <h4>Product Development Consulting</h4>
+              <p>BOM planning, component selection, design refinement, manufacturing considerations and engineering development roadmaps.</p>
+              <a class="service-read-more" href="#contact">Enquire About Service <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-laptop"></i></div>
+              <h4>Internships &amp; Industrial Training</h4>
+              <p>Practical learning and project-oriented training across embedded systems, IoT, AI/ML, electronics, software and robotics.</p>
+              <a class="service-read-more" href="#internship-apply">Apply for Internship <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-code-alt"></i></div>
+              <h4>Software &amp; Hardware Courses</h4>
+              <p>Training enquiries for programming, software development, embedded programming, electronics and hands-on technical learning.</p>
+              <a class="service-read-more" href="#contact">Enquire About Training <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-bulb"></i></div>
+              <h4>School STEM &amp; Robotics Training</h4>
+              <p>Hands-on school workshops covering coding, electronics, sensors, robotics, engineering concepts and creative problem-solving.</p>
+              <a class="service-read-more" href="#contact">Plan a School Program <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-package"></i></div>
+              <h4>Engineering Training Kits &amp; Lab Setup</h4>
+              <p>Embedded, IoT, robotics and electronics learning kits, along with laboratory setup and technical learning-resource planning.</p>
+              <a class="service-read-more" href="#contact">Enquire About Kits <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <article class="icon-box">
+              <div class="service-icon"><i class="bx bx-network-chart"></i></div>
+              <h4>Industry–Academia Collaboration</h4>
+              <p>Collaborative R&amp;D, institutional projects, faculty development programs, technical workshops and engineering partnerships.</p>
+              <a class="service-read-more" href="#contact">Discuss Collaboration <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROGRAMS ==================== -->
+    <section id="programs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Find the Right Support for Your Goal</h2>
+          <p>
+            Choose the pathway that best describes your project, training or
+            institutional requirement.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-mortarboard"></i></div>
+              <h3>Students &amp; Final-Year Projects</h3>
+              <p>Discuss academic project requirements, technical feasibility, project planning and prototype implementation.</p>
+              <a href="#contact">Discuss a Project <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-laptop"></i></div>
+              <h3>Internships &amp; Industrial Training</h3>
+              <p>Explore practical training in embedded systems, IoT, AI/ML, electronics, software, robotics and product development.</p>
+              <a href="#internship-apply">Apply for Internship <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-lightbulb"></i></div>
+              <h3>Schools: STEM, Coding &amp; Robotics</h3>
+              <p>Discuss age-appropriate activities in coding, electronics, robotics and creative engineering.</p>
+              <a href="#contact">Enquire About School Training <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-easel2"></i></div>
+              <h3>Colleges &amp; Faculty Development</h3>
+              <p>Plan technical workshops, faculty development programs, laboratory demonstrations and collaborative engineering activities.</p>
+              <a href="#contact">Discuss Institutional Programs <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-buildings"></i></div>
+              <h3>MSMEs, Startups &amp; Innovators</h3>
+              <p>Discuss technical feasibility, prototype development, engineering execution and product refinement.</p>
+              <a href="#contact">Discuss R&amp;D Requirements <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="program-card">
+              <div class="program-icon"><i class="bi bi-box-seam"></i></div>
+              <h3>CAD, 3D Printing &amp; Prototyping</h3>
+              <p>Discuss mechanical design, enclosures, 3D-printed parts and prototype development requirements.</p>
+              <a href="#contact">Discuss Your Prototype <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section id="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Projects &amp; R&amp;D Portfolio</h2>
+          <p>
+            Explore examples of engineering, IoT, AI, electronics and embedded
+            systems work. Update the captions to accurately reflect each project.
+          </p>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-1.jpg"
+                  alt="IoT smart monitoring system" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>IoT Smart Monitoring System</h3>
+                <p>Industrial IoT, sensors and connected monitoring.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-2.jpg"
+                  alt="Embedded product prototype" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Embedded Product Prototype</h3>
+                <p>Microcontrollers, firmware and hardware integration.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-3.jpg"
+                  alt="AI-based automation project" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>AI-Based Automation System</h3>
+                <p>Machine learning, data processing and control systems.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-4.jpg"
+                  alt="Medical device prototype" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Medical Device Prototype</h3>
+                <p>Electronics, sensors and prototype engineering.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-5.jpg"
+                  alt="IoT energy monitoring system" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Energy Monitoring IoT</h3>
+                <p>Power analytics, connected devices and monitoring.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-6.jpg"
+                  alt="Embedded control system" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Embedded Control System</h3>
+                <p>Automation, firmware and electronic control.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-7.jpg"
+                  alt="Drone and robotics development" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Drone &amp; Robotics R&amp;D</h3>
+                <p>Embedded systems, sensors and communication.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-8.jpg"
+                  alt="Industrial automation system" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Industrial Automation</h3>
+                <p>Control systems, sensors and connected equipment.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/portfolio-9.gif"
+                  alt="Smart connected device prototype" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-info">
+                <h3>Smart Device Prototype</h3>
+                <p>IoT, embedded systems and product development.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LEADERSHIP ==================== -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Leadership &amp; Research Team</h2>
+          <p>
+            Meet the people supporting engineering, research, product development,
+            technical operations and innovation at Protonical Researchers Hub.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-1.jpg"
+                  alt="Manikantan R, Founder and Chief Technology Officer"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Manikantan R Ex-IISc</h3>
+                <span class="role">Founder &amp; Chief Technology Officer</span>
+                <p>
+                  Leads engineering and product development across embedded
+                  systems, IoT, PCB design, rapid prototyping and applied R&amp;D.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-2.jpg"
+                  alt="Dr. Amithkumar Gajakosh" loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Dr. Amithkumar Gajakosh</h3>
+                <span class="role">Co-Founder &amp; Managing Director</span>
+                <p>
+                  Supports product development strategy, business development,
+                  commercialization planning and organizational growth.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-3.jpg"
+                  alt="Dr. Sudir P" loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Dr. Sudir P</h3>
+                <span class="role">Board Member</span>
+                <p>
+                  Contributes to technical review, documentation, validation
+                  and research-related assessment.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-4.jpg"
+                  alt="Vinita Gopal" loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Vinita Gopal</h3>
+                <span class="role">Accounting Manager &amp; Client Acquisition Partner</span>
+                <p>
+                  Supports financial operations, client relationships,
+                  business coordination and partnership development.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-5.jpg"
+                  alt="Mr. Krishna Kumar M" loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Mr. Krishna Kumar M Ex-IISc</h3>
+                <span class="role">Chief Research Mentor</span>
+                <p>
+                  Supports research review, technical assessment, performance
+                  validation and research and development guidance.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6 team-column">
+            <article class="team-card">
+              <div class="pic">
+                <img src="assets/img/team/team-6.jpg"
+                  alt="Shanmugam, 3D Printing and Additive Manufacturing Specialist"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="team-info">
+                <h3>Shanmugam</h3>
+                <span class="role">3D Printing &amp; Additive Manufacturing Specialist</span>
+                <p>
+                  Handles 3D printer operation, machine setup, print preparation,
+                  material handling, print monitoring and post-processing to
+                  support rapid prototyping and product development.
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="home-faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers about projects, training, prototyping and collaboration.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>Can you help with final-year engineering projects?</summary>
+            <div class="faq-answer">
+              We can discuss project scoping, feasibility, embedded systems,
+              IoT, PCB design, software and hardware integration, prototype
+              development and technical documentation. The agreed work must
+              follow applicable institutional and academic rules.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do you provide internships and industrial training?</summary>
+            <div class="faq-answer">
+              Internship enquiries are welcome for embedded systems, IoT,
+              AI/ML, robotics, electronics, software and product development.
+              Availability, duration, mode, project scope and any training-kit
+              charges are confirmed before enrollment.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can you provide CAD design and 3D printing?</summary>
+            <div class="faq-answer">
+              Contact us with the design or prototype requirements, dimensions,
+              material preferences and intended application. We can review the
+              requirements and confirm the suitable scope.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do you conduct school STEM and robotics workshops?</summary>
+            <div class="faq-answer">
+              Schools can enquire about activities covering coding, electronics,
+              sensors, robotics and engineering concepts. Programs depend on the
+              students' age group, learning objectives, equipment, participant
+              count and available time.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can you support MSME R&amp;D or grant-related projects?</summary>
+            <div class="faq-answer">
+              We can discuss feasibility, prototype development, technical
+              execution and documentation. Eligibility, procurement rules and
+              funding decisions depend on the specific program. Funding or
+              grant approval is not guaranteed.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can international clients contact Protonical Researchers Hub?</summary>
+            <div class="faq-answer">
+              Yes. International enquiries are welcome. Remote collaboration,
+              delivery arrangements, shipping, timelines and project scope
+              are assessed individually.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact Protonical Researchers Hub</h2>
+          <p>
+            Tell us about your engineering project, prototype, training
+            requirement or research enquiry.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+
+              <div class="contact-info-item">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <div>
+                  <h3>Office Location</h3>
+                  <p>
+                    <a href="https://www.google.com/maps/place/13%C2%B003'53.6%22N+77%C2%B043'02.4%22E/@13.0648975,77.715106,17z"
+                      target="_blank" rel="noopener noreferrer">
+                      Bidarahalli, Bengaluru, Karnataka – 560049, India
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>
+                    <a href="mailto:researchershub05@gmail.com?subject=Project%20Enquiry">
+                      researchershub05@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <i class="bi bi-phone" aria-hidden="true"></i>
+                <div>
+                  <h3>Call or WhatsApp</h3>
+                  <p><a href="tel:+919880470904">+91 98804 70904</a></p>
+                  <p>
+                    <a href="https://wa.me/919880470904?text=Hello%20Protonical%20Researchers%20Hub%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                      target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form-card">
+
+              <h3>Tell Us About Your Project</h3>
+              <p>
+                Share a few details so our team can understand how to help.
+                Project details are optional.
+              </p>
+
+              <form id="projectContactForm">
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <label for="contactName">Full name *</label>
+                    <input class="form-control" type="text" id="contactName"
+                      name="name" autocomplete="name" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactEmail">Email address *</label>
+                    <input class="form-control" type="email" id="contactEmail"
+                      name="email" autocomplete="email" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactPhone">Phone number</label>
+                    <input class="form-control" type="tel" id="contactPhone"
+                      name="phone" autocomplete="tel">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactService">What do you need help with? *</label>
+                    <select class="form-select" id="contactService" name="service" required>
+                      <option value="">Select a service</option>
+                      <option>Final-year student project / project mentorship</option>
+                      <option>Engineering or student project</option>
+                      <option>Research &amp; product development</option>
+                      <option>Funded R&amp;D project execution</option>
+                      <option>Industry–academia collaboration</option>
+                      <option>Embedded Systems / IoT</option>
+                      <option>AI / Machine Learning</option>
+                      <option>PCB design or hardware development</option>
+                      <option>CAD design / 3D printing / printer servicing</option>
+                      <option>Product commercialization &amp; consulting</option>
+                      <option>Internship or industrial training</option>
+                      <option>Software development or hardware development course</option>
+                      <option>Programming &amp; software training</option>
+                      <option>School STEM, coding or robotics training</option>
+                      <option>MSME project mentorship / support guidance</option>
+                      <option>Engineering training kits / lab setup</option>
+                      <option>Faculty development program / workshop</option>
+                      <option>Other enquiry</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactMessage">
+                      Project details <span class="text-muted fw-normal">(optional)</span>
+                    </label>
+                    <textarea class="form-control" id="contactMessage"
+                      name="message" rows="5"
+                      placeholder="Share your idea, requirements, timeline or questions (optional)."></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn btn-contact" id="contactSubmitButton" type="submit">
+                      Send Enquiry <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+
+                    <div class="contact-form-note">
+                      Your enquiry will be sent to our team. Project details are optional.
+                    </div>
+
+                    <div id="contactFormStatus" class="mt-2"
+                      role="status" aria-live="polite"></div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; <span id="copyright-year">2026</span>
+          <strong>Protonical Researchers Hub</strong>. All Rights Reserved.
+        </div>
+        <div class="credits">
+          <a href="https://www.linkedin.com/in/manikantan-r-632391257/"
+            target="_blank" rel="noopener noreferrer">
+            Connect with us on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+
+  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"
+    aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- ==================== VENDOR JAVASCRIPT ==================== -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- ==================== INTERNSHIP FORM SUBMISSION ==================== -->
+  <script>
+  (function () {
+    const form = document.getElementById('internshipApplicationForm');
+    if (!form) return;
+
+    const GOOGLE_SHEETS_WEB_APP_URL =
+      'https://script.google.com/macros/s/AKfycbzqumTsSNHNfUBy2iITXIf8xgD8nz6swv2uN3FJIA4LI4xT3TetUKcr7PqxWfOyYzOo/exec';
+
+    const status = document.getElementById('internshipFormStatus');
+    const submitButton = document.getElementById('internshipSubmitBtn');
+    const originalButtonHTML = submitButton.innerHTML;
+
+    let submitting = false;
+    let timeoutId = null;
+    let payloadForm = null;
+
+    function setStatus(kind, message) {
+      status.className = 'internship-form-status';
+      if (kind) status.classList.add(kind);
+      status.textContent = message;
+    }
+
+    function restoreButton() {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonHTML;
+    }
+
+    window.addEventListener('message', function (event) {
+      const data = event.data;
+
+      if (!data || data.type !== 'PRH_INTERNSHIP_RESULT' || !submitting) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      submitting = false;
+      restoreButton();
+
+      if (payloadForm) {
+        payloadForm.remove();
+        payloadForm = null;
+      }
+
+      if (data.success === true) {
+        form.reset();
+        setStatus(
+          'is-success',
+          'Thank you! Your internship application has been submitted successfully. Our team will review it and contact you if there is a suitable opportunity.'
+        );
       } else {
-        selectEl.addEventListener(type, listener)
+        setStatus(
+          'is-warning',
+          data.message || 'We could not save your application. Please check the required fields and try again.'
+        );
       }
-    }
-  }
-
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
-
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled
-   */
-  let selectHeader = select('#header')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-      }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
     });
-  }
 
-  /**
-   * Initiate  glightbox 
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
+      if (submitting) return;
+      if (!form.reportValidity()) return;
+
+      if (!GOOGLE_SHEETS_WEB_APP_URL.endsWith('/exec')) {
+        setStatus(
+          'is-warning',
+          'The internship form is not configured yet. Please contact researchershub05@gmail.com.'
+        );
+        return;
       }
-    })
-  }
 
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+      let iframe = document.getElementById('internshipSubmitFrame');
+
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'internshipSubmitFrame';
+        iframe.name = 'internshipSubmitFrame';
+        iframe.title = 'Internship application submission';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      if (payloadForm) payloadForm.remove();
+
+      payloadForm = document.createElement('form');
+      payloadForm.method = 'POST';
+      payloadForm.action = GOOGLE_SHEETS_WEB_APP_URL;
+      payloadForm.target = iframe.name;
+      payloadForm.style.display = 'none';
+
+      const values = {};
+
+      new FormData(form).forEach(function (value, key) {
+        values[key] = String(value);
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      values.formType = 'internship';
+      values.source = 'Website Internship Application';
+      values.consent =
+        document.getElementById('applicantConsent').checked ? 'yes' : 'no';
+      values.submittedAt = new Date().toISOString();
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+      Object.keys(values).forEach(function (key) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = values[key];
+        payloadForm.appendChild(input);
+      });
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
+      document.body.appendChild(payloadForm);
 
-  });
+      submitting = true;
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting…';
+      setStatus('', 'Submitting your application securely…');
 
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
+      timeoutId = window.setTimeout(function () {
+        if (!submitting) return;
 
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+        submitting = false;
+        restoreButton();
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false
+        setStatus(
+          'is-warning',
+          'We did not receive confirmation. Before trying again, check the Internship Applications tab to avoid a duplicate submission. If needed, contact researchershub05@gmail.com.'
+        );
+
+        if (payloadForm) {
+          payloadForm.remove();
+          payloadForm = null;
+        }
+      }, 30000);
+
+      payloadForm.submit();
     });
-  });
+  })();
+  </script>
 
-})()
+  <!-- ==================== CONTACT FORM SUBMISSION ==================== -->
+  <script>
+  (function () {
+    const form = document.getElementById('projectContactForm');
+    if (!form) return;
+
+    const endpoint =
+      'https://script.google.com/macros/s/AKfycbzqumTsSNHNfUBy2iITXIf8xgD8nz6swv2uN3FJIA4LI4xT3TetUKcr7PqxWfOyYzOo/exec';
+
+    const status = document.getElementById('contactFormStatus');
+    const button = document.getElementById('contactSubmitButton');
+
+    let timeoutId = null;
+    let payloadForm = null;
+    let submitting = false;
+
+    function setStatus(kind, message) {
+      status.className = 'mt-2';
+      if (kind) status.classList.add('text-' + kind);
+      status.textContent = message;
+    }
+
+    window.addEventListener('message', function (event) {
+      const data = event.data;
+
+      if (!data || data.type !== 'PRH_CONTACT_RESULT' || !submitting) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      submitting = false;
+
+      button.disabled = false;
+      button.innerHTML = 'Send Enquiry <i class="bi bi-arrow-right ms-1"></i>';
+
+      if (data.success === true) {
+        setStatus(
+          'success',
+          'Thank you! Your enquiry has been saved. Our team will contact you.'
+        );
+        form.reset();
+      } else {
+        setStatus(
+          'danger',
+          'We could not save your enquiry. Please try again or email researchershub05@gmail.com.'
+        );
+      }
+
+      if (payloadForm) {
+        payloadForm.remove();
+        payloadForm = null;
+      }
+    });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (submitting || !form.reportValidity()) return;
+
+      if (!endpoint || !endpoint.includes('/macros/s/') || !endpoint.endsWith('/exec')) {
+        setStatus('danger', 'The contact form endpoint is not configured correctly.');
+        return;
+      }
+
+      let iframe = document.getElementById('contactSubmitFrame');
+
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.name = 'contactSubmitFrame';
+        iframe.id = 'contactSubmitFrame';
+        iframe.title = 'Contact form submission';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      if (payloadForm) payloadForm.remove();
+
+      payloadForm = document.createElement('form');
+      payloadForm.method = 'POST';
+      payloadForm.action = endpoint;
+      payloadForm.target = iframe.name;
+      payloadForm.style.display = 'none';
+
+      const values = {
+        name: document.getElementById('contactName').value.trim(),
+        email: document.getElementById('contactEmail').value.trim(),
+        phone: document.getElementById('contactPhone').value.trim(),
+        service: document.getElementById('contactService').value,
+        message: document.getElementById('contactMessage').value.trim(),
+        source: 'Website Contact Form'
+      };
+
+      Object.entries(values).forEach(function ([key, value]) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        payloadForm.appendChild(input);
+      });
+
+      document.body.appendChild(payloadForm);
+
+      submitting = true;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      setStatus('', 'Submitting your enquiry…');
+
+      timeoutId = window.setTimeout(function () {
+        if (!submitting) return;
+
+        submitting = false;
+        button.disabled = false;
+        button.innerHTML = 'Send Enquiry <i class="bi bi-arrow-right ms-1"></i>';
+
+        setStatus(
+          'warning',
+          'We did not receive confirmation. Check the Contact Enquiries sheet before submitting again, to avoid duplicates.'
+        );
+
+        if (payloadForm) {
+          payloadForm.remove();
+          payloadForm = null;
+        }
+      }, 30000);
+
+      payloadForm.submit();
+    });
+  })();
+  </script>
+
+  <!-- Dynamic copyright year -->
+  <script>
+    (function () {
+      const yearElement = document.getElementById('copyright-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+
+</body>
+</html>

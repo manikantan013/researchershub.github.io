@@ -16,7 +16,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Jost", sans-serif;
 }
 
@@ -233,7 +238,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .dropdown .dropdown:hover > ul {
-  opacity: 1;
   top: 0;
   left: 100%;
   visibility: visible;
@@ -1982,7 +1986,6 @@ section {
 
 /* ============================================================
    FINAL RESPONSIVE FIXES FOR PROTONICAL RESEARCHERS HUB
-   Keep these rules at the VERY END of style.css.
    ============================================================ */
 
 *,
@@ -2087,7 +2090,7 @@ section {
   padding: 10px clamp(9px, .9vw, 15px) !important;
 }
 
-/* Hero height and illustration size */
+/* Enlarged hero illustration */
 #hero {
   display: flex !important;
   align-items: center !important;
@@ -2143,9 +2146,9 @@ section {
 #hero .hero-img img {
   display: block;
   width: 110% !important;
-  max-width: 760px !important;
+  max-width: 720px !important;
   height: auto !important;
-  max-height: 560px !important;
+  max-height: min(60vw, 620px) !important;
   margin: 0 0 0 -4%;
   object-fit: contain;
   object-position: center;
@@ -2168,7 +2171,7 @@ section {
   height: clamp(180px, 18vw, 260px);
 }
 
-/* Leadership photos: full image, rounded corners */
+/* Leadership photos */
 #team .team-column {
   display: flex;
   min-width: 0;
@@ -2274,9 +2277,9 @@ section {
   }
 
   #hero .hero-img img {
-    width: min(88%, 500px) !important;
-    max-width: 500px !important;
-    max-height: 340px !important;
+    width: min(90%, 560px) !important;
+    max-width: 560px !important;
+    max-height: min(75vw, 420px) !important;
     margin: 0 auto;
   }
 
@@ -2361,9 +2364,9 @@ section {
   }
 
   #hero .hero-img img {
-    width: min(82%, 350px) !important;
-    max-width: 350px !important;
-    max-height: 245px !important;
+    width: min(90%, 420px) !important;
+    max-width: 420px !important;
+    max-height: min(80vw, 340px) !important;
     margin: 0 auto;
   }
 
@@ -2431,9 +2434,9 @@ section {
   }
 
   #hero .hero-img img {
-    width: min(76%, 290px) !important;
-    max-width: 290px !important;
-    max-height: 210px !important;
+    width: min(90%, 360px) !important;
+    max-width: 360px !important;
+    max-height: min(76vw, 300px) !important;
   }
 
   #hero .hero-eyebrow {
